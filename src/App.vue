@@ -10,6 +10,7 @@
         <v-btn class="custom-btn v2" flat tile text @click="$vuetify.goTo('#projects')">Projects</v-btn>
         <v-btn flat tile icon @click="toggleTheme()"><v-icon>mdi-lightbulb-outline</v-icon></v-btn>
       </v-toolbar-items>
+      <v-spacer></v-spacer>
     </v-app-bar>
     <v-main>
       <section id="top">
@@ -37,7 +38,7 @@
             class="mx-auto title font-weight-light mb-8"
             max-width="720"
           >
-            My name is Quang Nguyen. I'm currently a Junior at Boston University majoring in Computer Science with a minor in Linguistics.
+            Hello! My name is Quang Nguyen. I'm currently a Junior at Boston University majoring in Computer Science with a minor in Linguistics.
           </v-responsive>
 
           <v-avatar
@@ -142,7 +143,7 @@ export default {
         {
           title: "Resume",
           icon: "mdi-file-document",
-          href: ""
+          href: "https://nddq-resume.s3.us-east-2.amazonaws.com/Quang_Nguyen_Resume.pdf"
         },
       ]
     }
@@ -161,5 +162,12 @@ export default {
 
 .custom-btn:hover {
   background-size: 100% .2em;
+}
+
+.theme--light.v-divider {
+    border-color: #00b8ff !important; 
+}
+.theme--dark.v-divider {
+    border-color: #00b8ff !important; 
 }
 </style>
