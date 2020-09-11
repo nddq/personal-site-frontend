@@ -16,7 +16,7 @@
       <section id="top">
         <v-parallax
           :height="350"
-          src="https://i.redd.it/n3cfog1e3bh51.jpg"
+          :src="$vuetify.theme.dark ? require('@/assets/invert.png') : require('@/assets/normal.jpg')"
         >
         </v-parallax>
       </section>
@@ -45,7 +45,7 @@
             class="elevation-12 mb-12"
             size="128"
           >
-            <v-img src="https://lh3.googleusercontent.com/a-/AOh14GjXS3WslCNa-YGsVscu1XHFy-N1MwGzs8JLImeKqQ"></v-img>
+            <v-img :src="require('@/assets/profile.jpg')"></v-img>
           </v-avatar>
 
           <div></div>
@@ -69,7 +69,7 @@
       <section id="mid">
         <v-parallax
           :height="400"
-          src="https://i.redd.it/n3cfog1e3bh51.jpg"
+          :src="$vuetify.theme.dark ? require('@/assets/invert.png') : require('@/assets/normal.jpg')"
         >
         </v-parallax>
       </section>
@@ -93,7 +93,7 @@
       <section id="bot">
         <v-parallax
           :height="400"
-          src="https://i.redd.it/n3cfog1e3bh51.jpg"
+          :src="$vuetify.theme.dark ? require('@/assets/invert.png') : require('@/assets/normal.jpg')"
         >
         </v-parallax>
       </section>
@@ -147,7 +147,7 @@ export default {
         },
       ]
     }
-  }
+  },
 };
 </script>
 <style scoped>
