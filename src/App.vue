@@ -87,7 +87,43 @@
 
             <v-divider></v-divider>
           </v-responsive>
+
+          <v-row>
+            <v-col
+              v-for="({ icon, link, text }, i) in projects"
+              :key="i"
+              cols="12"
+              md="4"
+            >
+              <v-card
+                class="py-12 px-4"
+                height="100%"
+                tile
+                ripple
+                :href="link"
+              >
+                <v-theme-provider dark>
+                  <div>
+                    <v-avatar
+                      class="ma-3"
+                      size="250"
+                      tile
+                    >
+                      <v-img :src="icon"></v-img>
+                    </v-avatar>
+                  </div>
+                </v-theme-provider>
+
+                <v-card-text
+                  class="subtitle-1"
+                  v-text="text"
+                >
+                </v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
         </v-container>
+
         <div class="py-12"></div>
       </section>
       <section id="bot">
@@ -145,7 +181,24 @@ export default {
           icon: "mdi-file-document",
           href: "https://nddq-resume.s3.us-east-2.amazonaws.com/Quang_Nguyen_Resume.pdf"
         },
-      ]
+      ],
+      projects: [
+          {
+            icon: require('@/assets/agriworks.png'),
+            link: 'https://agri-works.org',
+            text: 'A software-as-a-service Hackk4Impact project aimed at providing international farmers, data scientists, and policymakers a platform to analyze agricultural data in order to make better agricultural policy decisions to benefit both farmers and consumers.',
+          },
+          {
+            icon: require('@/assets/mood.png'),
+            link: 'https://github.com/nddq/Mood.ly',
+            text: 'A web-app that helps manage savings accounts by performing sentiment analysis on the users\' answers on several provided questions.',
+          },
+          {
+            icon: require('@/assets/whatsapp.png'),
+            link: 'https://github.com/nddq/whatsapplite',
+            text: 'A iOS and Android messaging application prototype that imitates WhatsApp. Built during the Spring 2020 Hack4Impact bootcamp at Boston University.',
+          },
+        ],
     }
   },
 };
